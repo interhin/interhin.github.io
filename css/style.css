@@ -18,8 +18,9 @@ body {
     align-items: center;
 }
 
+
 .offer {
-    width: calc(100vw-20px);
+    /*width: calc(100vw-20px);*/
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -66,4 +67,17 @@ body {
 
 .more-but:active {
     background-color: #EF6C00 !important;
+}
+
+
+@media screen and (orientation:landscape) {
+    .offer__img img {
+        width:30%;
+    }
+    .offer:not(:first-child) {
+        margin: 150px 0;
+    }
+    .offer:last-child {
+        margin-bottom: 0;
+    }
 }
