@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    new SwipeAnimate(50,500);
+    //new SwipeAnimate(50,500);
+    $('.offers-container').fullpage();
 });
 
 
@@ -19,9 +20,9 @@ class SwipeAnimate {
     }
 
     addScrollListener() {
-
         // Обработчик для скролла страницы (стрелочная функция чтобы сохранить контекст класса для вызова animateScroll)
         window.addEventListener("scroll",() => {
+            //console.log(this.coords[this.curIndex],document.querySelector("html").scrollTop);
             // Если при скролле отступ сверху больше чем координата Y оффера + указанное смещение и не происходит анимация
             // то анимируем скролл вниз к следующему офферу
             if (pageYOffset>this.coords[this.curIndex]+this.size && !this.isAnimating) {
@@ -69,7 +70,7 @@ class SwipeAnimate {
     }
 
     orientationChanged() {
-        const timeout = 120; // Таймаут если ориентация долго меняется
+        const timeout = 120; // Макс кол-во вызовов функций
         return new Promise(function(resolve) {
           const go = (i, height0) => {
             // Крайний случай рекурсии
@@ -100,4 +101,5 @@ class SwipeAnimate {
             }
         }
     }
+
 }

@@ -8,7 +8,7 @@ body {
     background-color: #81D4FA;*/
     background-color: #e7ebf4;
     font-family: "ctcspanish";
-    padding: 0 20px;
+    padding: 0 20px !important;
 }
 
 .offers-contaier {
@@ -53,6 +53,7 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .more-but {
@@ -63,6 +64,7 @@ body {
     padding: .375rem .75rem;
     color:white !important;
     text-decoration: none !important;
+    width: 60vw;
 }
 
 .more-but:active {
@@ -74,10 +76,11 @@ body {
     .offer__img img {
         width:30%;
     }
+    /*
     .offer:not(:first-child) {
         margin: 150px 0;
     }
     .offer:last-child {
         margin-bottom: 0;
-    }
+    }*/
 }
