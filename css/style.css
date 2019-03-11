@@ -151,7 +151,11 @@ header address {
 
 @media (orientation: landscape) {
     .offer:nth-child(1) .offer__title{
-        margin-top: -60px;
+        margin-top: -65px;
+    }
+
+    .offer:nth-child(1) .offer__title h1{
+        font-size: 32px;
     }
 }
 
@@ -304,15 +308,16 @@ header address {
         padding: 0 20px;
         display: flex;
         margin-top: 0px;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .form-consult__options .options__item{
-        font-size:13px;
+        flex-basis: 50%;
     }
 
     .form-consult__options .options__item .item__description{
-        margin-left: 20px;
+        margin-left: 35px;
     }
 
     .form-consult .form-consult__inputs .input-group {
@@ -361,6 +366,18 @@ header address {
     margin-right: 15px;
   }
 
+  .footer__icons {
+    margin-bottom: 10px;
+  }
+
+  .bottom__left {
+      width:50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -10px;
+  }
+
   .footer__bottom {
       display: flex;
       align-items: center;
@@ -368,7 +385,7 @@ header address {
   }
 
   .footer__logo {
-      width: 40%;
+      width: 100%;
   }
   .footer__logo img{
     width: 100%;
@@ -381,7 +398,6 @@ header address {
 
     .footer__wrapper {
         display: flex;
-        margin-top: -30px;
     }
 
     .footer__top {
