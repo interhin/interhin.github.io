@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //new SwipeAnimate(50,500);
-    $('.offers-container').fullpage();
+    $('.offers-container').fullpage({scrollingSpeed:500});
 });
 
 

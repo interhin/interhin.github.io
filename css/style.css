@@ -8,7 +8,48 @@ body {
     background-color: #81D4FA;*/
     background-color: #e7ebf4;
     font-family: "ctcspanish";
-    padding: 0 20px !important;
+}
+
+body.fp-viewing-0 header {
+    opacity: 1;
+    max-height: 300px;
+    padding: 10px 20px;
+}
+
+header {
+    background-color: #10ab5e;
+    display: flex;
+    align-items: center;
+    color:white;
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: opacity .3s linear, max-height .5s ease-in, padding .3s linear;
+}
+
+.header__logo {
+}
+
+.header__logo img {
+    height: 40px;
+}
+
+header address {
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adress__city .city__name {
+    margin-left: 5px;
+    border-bottom: 2px dotted white;
+}
+
+.adress__number {
+    color:white;
 }
 
 .offers-contaier {
@@ -27,6 +68,7 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    background-size: cover;
 }
 
 .offer__title {
@@ -35,52 +77,288 @@ body {
 
 .offer__title h1{
     font-size: 40px;
-    color:#22252d;
+    color:#fff;
     
+}
+
+.offer__action {
+    padding: 0 10px;
 }
 
 .offer__action h2{
     font-size: 24px;
-    color:#f44336;
+    color:#EEEEEE;
 }
 
-.offer__img img {
-    width: 70%;
-    height: auto;
-}
 
 .offer__more {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
+}
+
+.offer__more .more__agree {
+    margin-top: 5px;
+    color:#90A4AE;
+    font-size: 12px;
+}
+
+.offer__more .more__agree a{
+    text-decoration: underline;
+    color:inherit;
 }
 
 .more-but {
-    background-color: #ff9000;
+    background-color: #10ab5e;
     border:0;
     outline: 0;
-    box-shadow: 1px 1px 2px #EF6C00;
+    box-shadow: 1px 1px 2px #2E7D32;
     padding: .375rem .75rem;
     color:white !important;
     text-decoration: none !important;
-    width: 60vw;
+    width: 100%;
 }
 
 .more-but:active {
-    background-color: #EF6C00 !important;
+    background-color: #2E7D32 !important;
 }
 
-
-@media screen and (orientation:landscape) {
-    .offer__img img {
-        width:30%;
-    }
-    /*
-    .offer:not(:first-child) {
-        margin: 150px 0;
-    }
-    .offer:last-child {
-        margin-bottom: 0;
-    }*/
+.more__btns {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.get-price-but {
+    margin-right: 10px;
+    background-color: #F9A825;
+    border:0;
+    outline: 0;
+    box-shadow: 1px 1px 1px #F9A825;
+    padding: .375rem .75rem;
+    color:white !important;
+    text-decoration: none !important;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.offer:nth-child(1) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/technic.jpg);
+}
+
+.offer:nth-child(2) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/premium.jpg);
+}
+
+.offer:nth-child(3) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/svai.jpg);
+}
+
+.offer:nth-child(5) {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/reconstruction.JPG);
+}
+
+.offer:nth-child(3) .offer__title h1 {
+    font-size: 64px;
+}
+
+.form-consult {
+    background-color: #10ab5e;
+
+}
+
+.form-consult .wrapper {
+    height: calc(100% - 40px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    margin:20px;
+}
+
+.form-consult .form-consult__title h1{
+    font-weight: bold;
+}
+.form-consult__options {
+    margin-top: 20px;
+}
+.form-consult__options .options__item{
+    text-align: left;
+    position: relative;
+}
+
+.form-consult__options .options__item i{
+    color:#10ab5e;
+    position: absolute;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.options__item .item__description {
+    margin-left: 30px;
+}
+
+.form-consult .form-consult__inputs {
+    width: 100%;
+    padding: 0 18px;
+    margin-top: 20px;
+}
+
+.form-consult .form-consult__inputs i {
+    color:#10ab5e;
+}
+
+.form-consult .form-consult__inputs input {
+    border-left: 0;
+}
+
+.form-consult .form-consult__inputs .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+}
+
+.form-consult .form-consult__inputs .input-group {
+    margin-top: 10px;
+}
+.form-consult .form-consult__inputs .input-group label {
+    text-align: left;
+}
+
+/* Customize the label (the container) */
+.container-checkbox {
+    display: block;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border:1px solid #ced4da;
+  }
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-checkbox input:checked ~ .checkmark {
+    
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #10ab5e;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  @media (orientation: landscape) {
+    .form-consult__options {
+        margin-top: 0px;
+    }
+
+    .form-consult .form-consult__inputs .input-group {
+        margin-top: 0px;
+    }
+
+    .checkbox-inp-group {
+        margin-top: 5px !important;
+    }
+
+  }
+
+  .advantages {
+      background-image: url(../img/adv.png);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+
+  .uslugi {
+      background-image: url(../img/uslugi.PNG);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+  }
+
+  footer {
+      background-color: #67666c;
+      padding: 20px;
+      color:#fff;
+  }
+
+  footer a {
+      color:#fff;
+  }
+
+  .footer__phone {
+      font-size: 24px;
+  }
+
+  .footer__adress {
+      margin-top: 15px;
+  }
+
+  .footer__icons a{
+    margin-right: 15px;
+  }
+
+  .footer__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+
+  .footer__logo {
+      width: 40%;
+  }
+  .footer__logo img{
+    width: 100%;
+  }
+
+  @media (orientation: landscape) {
+    footer p {
+        margin: 0px;
+    }
+
+  }
