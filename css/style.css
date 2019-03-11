@@ -149,6 +149,12 @@ header address {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/technic.jpg);
 }
 
+@media (orientation: landscape) {
+    .offer:nth-child(1) .offer__title{
+        margin-top: -60px;
+    }
+}
+
 .offer:nth-child(2) {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../img/premium.jpg);
 }
@@ -294,7 +300,19 @@ header address {
 
   @media (orientation: landscape) {
     .form-consult__options {
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
         margin-top: 0px;
+        justify-content: space-between;
+    }
+
+    .form-consult__options .options__item{
+        font-size:13px;
+    }
+
+    .form-consult__options .options__item .item__description{
+        margin-left: 20px;
     }
 
     .form-consult .form-consult__inputs .input-group {
@@ -323,7 +341,7 @@ header address {
 
   footer {
       background-color: #67666c;
-      padding: 20px;
+      padding: 0 20px;
       color:#fff;
   }
 
@@ -359,6 +377,21 @@ header address {
   @media (orientation: landscape) {
     footer p {
         margin: 0px;
+    }
+
+    .footer__wrapper {
+        display: flex;
+        margin-top: -30px;
+    }
+
+    .footer__top {
+        width:50%;
+    }
+    .footer__bottom {
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
   }
