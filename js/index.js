@@ -1,6 +1,22 @@
 $(document).ready(function(){
     //new SwipeAnimate(50,500);
-    $('.offers-container').fullpage({scrollingSpeed:500});
+    $('.offers-container').fullpage({
+        scrollingSpeed:500,
+        scrollBar:true,
+        fitToSection:false
+    });
+
+    $('#arrow-bot').click(function(){
+        $.fn.fullpage.moveSectionDown();
+    });
+
+    window.onresize = function() {
+        if (screen.height>500) {
+            $.fn.fullpage.setAutoScrolling(true);
+        } else {
+            $.fn.fullpage.setAutoScrolling(false);
+        }
+    }
 
     let $consBut = $("#getConsultBut");
     let $name = $("#consultName");
@@ -30,6 +46,10 @@ $(document).ready(function(){
             $(this).attr("href",`https://wa.me/79538046046?text=Постройка:%20${selectedCalcValue}%0aДлина:%20${calcLength}%0aШирина:%20${calcWidth}%0aНажмите%20отправить%20чтобы%20получить%20расчет`);
         }
     });
+
+    // $('input').focus(function() { $.fn.fullpage.setAutoScrolling(false); });
+    // $('input').blur(function() { $.fn.fullpage.setAutoScrolling(true); });
+
 });
 
 

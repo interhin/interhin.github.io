@@ -107,6 +107,10 @@ header address {
     .offer__more {
         margin-top: 20px;
     }
+
+    .offer:first-child .offer__title{
+        margin-top: 60px;
+    }
 }
 
 .offer__more .more__agree {
@@ -323,6 +327,16 @@ header address {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  @media screen and (max-height:500px) {
+    .form-consult__options {
+        display: none !important;
+    }
+
+    .form-consult .wrapper {
+        justify-content: flex-start !important;
+    }
   }
 
   @media (orientation: landscape) {
@@ -551,8 +565,113 @@ input[type=number]:focus,
 
 .flamp-icon {
     display: block;
-    width: 31px;
-    height: 26px;
+    width: 30px;
+    height: 25px;
     background-image: url(../img/flamp.png);
     background-size: contain;
 }
+
+@media screen and (max-height:420px) {
+    .foundament-for-wrapper,.foundament-for-p {
+        display: none;
+    }
+}
+
+#arrow-bot {
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (max-height:600px) {
+    #arrow-bot {
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        transform: translate(-50%,-2%);
+    }
+}
+
+@media (orientation: landscape) {
+    #arrow-bot {
+        display: none;
+    }
+}
+
+.page-scroll .btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+  }
+  
+  .page-scroll .btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    50% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @-moz-keyframes pulse {
+    0% {
+      -moz-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    50% {
+      -moz-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  
+    100% {
+      -moz-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  .btn-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 60px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.6);
+    -webkit-transition: background .4s ease-in-out;
+    -moz-transition: background .4s ease-in-out;
+    transition: background .4s ease-in-out;
+  }
+  
+  .btn-circle:hover, .btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+  }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fullpage/jquery.fullpage.css">
@@ -58,6 +58,11 @@
                 %20с%20техникой?">Подробнее...</a>
                 <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy" data-toggle="modal" data-target="#myModal">условиям.</a></span>
             </div>
+            <div class="page-scroll text-center" id="arrow-bot">
+                <a href="#secondPage" class="btn btn-circle">
+                    <i class="fa fa-angle-down fa-2x animated"></i>
+                </a>
+            </div>
         </div>
 
         <div class="offer section">
@@ -93,7 +98,7 @@
         <div class="calculate-section section">
             <div class="calculate-section__wrapper">
                 <h1>Получите расчет стоимости фундамента прямо сейчас</h1>
-                <p>Фундамент для:</p>
+                <p class="foundament-for-p">Фундамент для:</p>
                 <div class="foundament-for-wrapper">
                     <div class="custom-control custom-radio">
                         <input type="radio" id="houseRadio" name="foundamentFor" value="Дом" class="custom-control-input">
