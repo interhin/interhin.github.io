@@ -1,6 +1,35 @@
 $(document).ready(function(){
     //new SwipeAnimate(50,500);
     $('.offers-container').fullpage({scrollingSpeed:500});
+
+    let $consBut = $("#getConsultBut");
+    let $name = $("#consultName");
+    let $phone = $("#consultPhone");
+    let check = document.getElementById("consultCheckBox");
+    $("#consultName,#consultPhone").on("change paste keyup", validateConsult);
+    $("#consultName,#consultPhone").on("change paste keyup", function(){
+        $consBut.attr("href",`https://wa.me/79538046046?text=Имя:%20${$name.val()}%0aТелефон:%20${$phone.val()}%0aНужна%20консультация%20специалиста.`);
+    });
+    check.addEventListener("change",validateConsult);
+    $consBut.on("click",function(e){
+        if ($(this).hasClass("disabled")) e.preventDefault();
+    });
+
+    function validateConsult() {
+        if ($name.val() && $phone.val() && check.checked) {
+            $consBut.removeClass("disabled");
+        } else {
+            $consBut.addClass("disabled");
+        }
+    }
+    $("#calc-but").on("click",function(){
+        let selectedCalcValue = $('input[name=foundamentFor]:checked').val();
+        let calcLength = document.getElementById("calcLength").value;
+        let calcWidth = document.getElementById("calcWidth").value;
+        if (selectedCalcValue!==undefined) {
+            $(this).attr("href",`https://wa.me/79538046046?text=Постройка:%20${selectedCalcValue}%0aДлина:%20${calcLength}%0aШирина:%20${calcWidth}%0aНажмите%20отправить%20чтобы%20получить%20расчет`);
+        }
+    });
 });
 
 

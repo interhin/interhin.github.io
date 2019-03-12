@@ -11,20 +11,42 @@
     <title>Phone Landing</title>
 </head>
 <body>
-    <header>
-        <a href="/" class="header__logo">
-            <img src="img/logo.png">
-        </a>
-        <address>
-            <a class="adress__number" href="tel:+73832359039">+7 (383) 325 90 39</a>
-            <div class="adress__city">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span class="city__name">Новосибирск</span>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Заголовок</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-        </address>
-    </header>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum quisquam impedit esse tempore aspernatur autem, officia error dignissimos, maxime, a dicta recusandae mollitia corrupti possimus sit enim. Sapiente, nesciunt at.
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+      
+          </div>
+        </div>
+      </div>
     <div class="offers-container">
         <div class="offer section">
+            <header>
+                <a href="/" class="header__logo">
+                    <img src="img/logo.png">
+                </a>
+                <address>
+                    <div class="adress__city">
+                        <span class="city__name">Новосибирск</span>
+                    </div>
+                    <a class="adress__number" href="tel:+73832359039">+7 (383) 325 90 39</a>
+                </address>
+            </header>
             <div class="offer__title">
                 <h1>Акция: монтаж техникой по цене ручного монтажа.</h1>
             </div>
@@ -33,8 +55,8 @@
             </div>
             <div class="offer__more">
                 <a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20подробнее%20про%20акцию
-                %20с%20техникой?">Подробнее</a>
-                <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy">условиям.</a></span>
+                %20с%20техникой?">Подробнее...</a>
+                <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy" data-toggle="modal" data-target="#myModal">условиям.</a></span>
             </div>
         </div>
 
@@ -46,7 +68,7 @@
                 <h2>Прочное покрытие без доплаты.</h2>
             </div>
             <div class="offer__more">
-                <a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20про%20покрытие?">Подробнее</a>
+                <a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20про%20покрытие?">Подробнее...</a>
                 <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy">условиям.</a></span>
             </div>
         </div>
@@ -63,10 +85,53 @@
                     <a class="get-price-but" href="https://wa.me/79538046046?text=Подскажите%20какие%20сваи%20по%20акции?">
                         <i class="fa fa-file-excel-o" aria-hidden="true"></i> Получить прайс лист
                     </a>
-                    <!--<a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20про%20покрытие?">Подробнее</a>-->
                 </div>
                 <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy">условиям.</a></span>
             </div>
+        </div>
+
+        <div class="calculate-section section">
+            <div class="calculate-section__wrapper">
+                <h1>Получите расчет стоимости фундамента прямо сейчас</h1>
+                <p>Фундамент для:</p>
+                <div class="foundament-for-wrapper">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="houseRadio" name="foundamentFor" value="Дом" class="custom-control-input">
+                        <label class="custom-control-label" for="houseRadio">Дом</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="hozBlockRadio" name="foundamentFor" value="Хозблок" class="custom-control-input">
+                        <label class="custom-control-label" for="hozBlockRadio">Хозблок</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="banyaRadio" name="foundamentFor" value="Баня" class="custom-control-input">
+                        <label class="custom-control-label" for="banyaRadio">Баня</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="besedkaRadio" name="foundamentFor" value="Беседка" class="custom-control-input">
+                        <label class="custom-control-label" for="besedkaRadio">Беседка</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="otherRadio" name="foundamentFor" value="Другое" class="custom-control-input">
+                        <label class="custom-control-label" for="otherRadio">Другое</label>
+                    </div>
+                </div>
+                <div class="calc-group">
+                    <div class="calculate-section__group">
+                        <span>Длина:&nbsp;</span>
+                        <input id="calcLength" type="text" class="form-control" id="inlineFormInputGroup">
+                        <span>&nbsp; м</span>
+                    </div>
+                    <div class="calculate-section__group">
+                        <span>Ширина:&nbsp;</span>
+                        <input id="calcWidth" type="text" class="form-control" id="inlineFormInputGroup">
+                        <span>&nbsp; м</span>
+                    </div>
+                </div>
+
+                <a class="more-but" id="calc-but" href="https://wa.me/79538046046?text=Постройка:%20Дом%0aДлина:%2010%0aШирина:%208%0aНажмите%20отправить%20чтобы%20получить%20расчет">Расчитать</a>
+            </div>
+
         </div>
 
         <div class="form-consult section">
@@ -98,25 +163,25 @@
                             <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Введите ваше имя">
+                            <input id="consultName" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Введите ваше имя">
                         </div>
                         <div class="input-group">
                             <div class="input-group-prepend">
                             <div class="input-group-text"><i class="fa fa-phone" aria-hidden="true"></i></div>
                             </div>
-                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Введите ваш телефон">
+                            <input id="consultPhone" type="text" class="form-control" id="inlineFormInputGroup" placeholder="Введите ваш телефон">
                         </div>
                     </div>
                     <div class="input-group checkbox-inp-group">
                         <div class="form-check">
                             <label class="container-checkbox">Я принимаю условия пользовательского соглашения
-                                <input type="checkbox">
+                                <input type="checkbox" id="consultCheckBox" checked>
                                 <span class="checkmark"></span>
                             </label>
                         </div>
                     </div>
                     <div class="input-group">
-                        <a class="more-but" href="https://wa.me/79538046046?text=Нужна%20консультация%20специалиста.">Получить</a>
+                        <a id="getConsultBut" class="get-but disabled" href="https://wa.me/79538046046?text=Нужна%20консультация%20специалиста.">Получить</a>
                     </div>
                     
                 </div>
@@ -131,7 +196,7 @@
                 <h2>Выполняем реконструкцию фундамента винтовыми сваями.</h2>
             </div>
             <div class="offer__more">
-                <a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20про%20реконструкцию.">Подробнее</a>
+                <a class="more-but" href="https://wa.me/79538046046?text=Расскажите%20про%20реконструкцию.">Подробнее...</a>
                 <span class="more__agree">Нажимая кнопку, я даю согласие на обработку моих персональных данных согласно <a href="http://sibsvai.ru/show_form.php?type=policy">условиям.</a></span>
             </div>
         </div>
@@ -157,8 +222,9 @@
                 <div class="footer__bottom">
                     <div class="bottom__left">
                         <div class="footer__icons">
-                            <a href="#vk"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a> 
-                            <a href="#fb"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> 
+                            <a href="https://vk.com/sib_svai"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></a> 
+                            <a href="https://www.instagram.com/sibsvairu/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a> 
+                            <a href="https://flamp.ru/sibsvai" class="flamp-icon"></a>
                         </div>
                         <a href="/" class="footer__logo">
                             <img src="img/logo.png">
