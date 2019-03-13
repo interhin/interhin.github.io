@@ -45,7 +45,7 @@ $(document).ready(function(){
         let calcLength = document.getElementById("calcLength").value;
         let calcWidth = document.getElementById("calcWidth").value;
         if (selectedCalcValue!==undefined) {
-            $(this).attr("href",`https://wa.me/79538046046?text=Постройка:%20${selectedCalcValue}%0aДлина:%20${calcLength}%0aШирина:%20${calcWidth}%0aНажмите%20отправить%20чтобы%20получить%20расчет`);
+            $(this).attr("href",`https://wa.me/79538046046?text=Постройка:%20${selectedCalcValue}%0aДлина:%20${calcLength}%0aШирина:%20${calcWidth}%0aНажмите%20«отправить»%20чтобы%20получить%20расчет`);
         }
     });
 
