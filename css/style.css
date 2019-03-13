@@ -568,6 +568,7 @@ input[type=number]:focus,
     height: 25px;
     background-image: url(../img/flamp.png);
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @media screen and (max-height:420px) {
