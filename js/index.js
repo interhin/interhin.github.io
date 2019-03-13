@@ -3,20 +3,22 @@ $(document).ready(function(){
     $('.offers-container').fullpage({
         scrollingSpeed:500,
         scrollBar:true,
-        fitToSection:false
+        fitToSection:true
     });
+
 
     $('#arrow-bot').click(function(){
         $.fn.fullpage.moveSectionDown();
     });
 
-    window.onresize = function() {
-        if (screen.height>500) {
-            $.fn.fullpage.setAutoScrolling(true);
-        } else {
-            $.fn.fullpage.setAutoScrolling(false);
-        }
-    }
+    $("input[type=text]").on('focus', function(){
+        $.fn.fullpage.setFitToSection(false);
+    });
+
+    $("input[type=text]").on('blur', function(){
+        $.fn.fullpage.setFitToSection(true);
+    });
+
 
     let $consBut = $("#getConsultBut");
     let $name = $("#consultName");
