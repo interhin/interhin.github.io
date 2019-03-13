@@ -342,7 +342,7 @@ header address {
     transform: rotate(45deg);
   }
 
-  @media screen and (max-height:500px) {
+  @media screen and (max-width:375px) and (max-height:375px) {
     .form-consult__options {
         display: none !important;
     }
@@ -571,11 +571,11 @@ input[type=number]:focus,
     background-repeat: no-repeat;
 }
 
-@media screen and (max-height:420px) {
+/* @media screen and (orientation: portrait) and (max-height:420px) {
     .foundament-for-wrapper,.foundament-for-p {
-        display: none;
+        display: none !important;
     }
-}
+} */
 
 #arrow-bot {
     position: absolute;
