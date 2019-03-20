@@ -7,7 +7,7 @@ $(document).ready(function(){
     });
 
 
-    $('#arrow-bot').click(function(){
+    $('.arrow-bot').click(function(){
         $.fn.fullpage.moveSectionDown();
     });
 

@@ -586,15 +586,15 @@ input[type=number]:focus,
     }
 } */
 
-#arrow-bot {
+.arrow-bot {
     position: absolute;
     bottom: 0;
     left:50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-20%);
 }
 
 @media screen and (max-height:600px) {
-    #arrow-bot {
+    .arrow-bot {
         position: absolute;
         bottom: 0;
         left:50%;
@@ -603,31 +603,37 @@ input[type=number]:focus,
 }
 
 @media (orientation: landscape) {
-    #arrow-bot {
+    .arrow-bot {
         display: none;
     }
 }
 
-.page-scroll .btn-circle i.animated {
+.arrow-bot-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-scroll .btn-circle img.animated {
     -webkit-transition-property: -webkit-transform;
     -webkit-transition-duration: 1s;
     -moz-transition-property: -moz-transform;
     -moz-transition-duration: 1s;
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.4s;
+    -moz-animation-duration: 1.4s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
   }
   
-  .page-scroll .btn-circle:hover i.animated {
+  .page-scroll .btn-circle:hover img.animated {
     -webkit-animation-name: pulse;
     -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.4s;
+    -moz-animation-duration: 1.4s;
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
@@ -636,35 +642,29 @@ input[type=number]:focus,
   
   @-webkit-keyframes pulse {
     0% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      width:100%;
     }
   
     50% {
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2);
+      width:120%;
     }
   
     100% {
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      width:100%;
     }
   }
   
   @-moz-keyframes pulse {
     0% {
-      -moz-transform: scale(1);
-      transform: scale(1);
+        width:100%;
     }
   
     50% {
-      -moz-transform: scale(1.2);
-      transform: scale(1.2);
+        width:120%;
     }
   
     100% {
-      -moz-transform: scale(1);
-      transform: scale(1);
+        width:100%;
     }
   }
   
