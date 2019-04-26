@@ -1,0 +1,523 @@
+@font-face {
+    font-family: "RConBI";
+    src: url("../fonts/RobotoCondensed-BoldItalic.ttf")
+}
+@font-face {
+    font-family: "UB";
+    src: url("../fonts/Ubuntu-B.ttf")
+}
+@font-face {
+    font-family: "RConB";
+    src: url("../fonts/RobotoCondensed-Bold.ttf")
+}
+
+section {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+body {
+    color:#336699;
+    font-family: "RConBI";
+}
+
+body a,i{
+    color:#336699;
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    background-color: #bdddf7;
+    padding: 40px 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-text {
+    margin-top: auto;
+    margin-bottom: 3px;
+    margin-left: 25px;
+    font-size: 48px;
+    color:#c83f55;
+}
+
+.contacts {
+    margin-left: auto;
+}
+
+.contacts-item {
+    display: flex;
+    align-items: center;
+}
+.contacts-item a {
+    margin-left: 10px;
+}
+
+.contacts .but {
+    margin-top: 10px;
+}
+
+@media (max-width: 989px) {
+    .contacts {
+        width: 100%;
+    }
+
+    .logo-text {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: 772px) {
+    .logo-text {
+        margin: 0;
+        display: block;
+        width: 100%;
+    }
+}
+
+.but {
+    display: block;
+    background-color: transparent;
+    border: 3px solid #336699;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.about .wrapper {
+    position: relative;
+    max-width: 850px;
+    min-height: 450px;
+    padding: 40px 30px;
+    border: 7px solid #336699;
+}
+
+.about h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+}
+
+.about .wrapper .about-text p:nth-child(2) {
+    margin-top: 20px;
+}
+
+.about-text {
+    max-width: 80%;
+}
+
+.about-text p:nth-child(1) {
+    max-width: 90%;
+}
+
+@media (max-width: 1199.98px) {
+    .about-image {
+        display: none;
+    }
+    .about-text {
+        max-width: 100%;
+    }
+    
+    .about-text p:nth-child(1) {
+        max-width: 100%;
+    }
+}
+
+.about-image {
+    position: absolute;
+    right:-112px;
+    top:50px;
+}
+
+.courses {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.courses-head-text {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.courses-list {
+    width: 50%;
+    text-align: center;
+}
+
+.courses-items {
+    width: 100%;
+}
+
+.courses-item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.courses-item input[type=checkbox] {
+    margin-left: auto;
+    margin-bottom: 0;
+    border: 1px solid #336699;
+}
+
+.courses-item label {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: 10px;
+    text-align: left;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 0;
+    padding-right: 25px;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    border: 2px solid #336699;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #336699;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.course-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.course-form input {
+    margin-top: 20px;
+    padding: 2px 25px;
+    background-color: #bdddf7;
+    color:#336699;
+    outline: 0;
+    border: 0;
+}
+
+.course-form input::placeholder {
+    color:#336699;
+}
+
+.course-form a.but {
+    margin-top: 15px;
+    padding: 2px 50px;
+}
+
+@media (max-width: 1200px) {
+    .courses {
+        flex-direction: column;
+    }
+    .courses-list {
+        width: 100%;
+    }
+    .course-form {
+        width: 65%;
+        justify-content:stretch;
+        align-items: stretch;
+        padding: 0;
+    }
+}
+
+.specialists {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "RConB";
+}
+
+.specialists-title {
+    font-size: 20px;
+    color:#cc6699;
+}
+
+.specialists-list {
+    width: 100%;
+    display: flex;
+}
+
+.spec-name {
+    color:#cc6699;
+    margin-top: 15px;
+}
+
+.spec-wrapper {
+    padding: 40px 0;
+    background-color: #bdddf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spec-wrapper img {
+    border-radius: 50%;
+    border:15px solid #336699;
+}
+
+.circle {
+    position: relative;
+}
+
+.circle svg {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+  
+.circle circle {
+    stroke-width: 5;
+    stroke-dasharray: 21, 20;
+    fill: none;
+    stroke: #336699;
+}
+
+.slick-prev::before, .slick-next::before{ 
+    color:#336699;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.schedule-btns {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:1250px) {
+    .schedule-btns {
+        width: 80%;
+    }
+}
+
+.schedule-btns a {
+    width: calc(50% - 40px);
+    margin: 10px 20px;
+}
+
+@media (max-width:800px) {
+    .schedule-btns a {
+        width: 100%;
+    }
+}
+
+.schedule-btn {
+    font-size: 18px;
+    color:#fff;
+    padding: 2px 30px;
+}
+
+.schedule-head-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.blue-btn {
+    background-color: #336699;
+}
+
+.pink-btn {
+    background-color: #cc6699;
+}
+
+.schedule-btn:hover {
+    color:#fff;
+    cursor: pointer;
+}
+
+.summer {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+.summer-wrapper {
+    background-color: #bdddf7;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.left-line {
+    position: absolute;
+    top:-15px;
+    margin-left: -100px;
+}
+
+.right-line {
+    position: absolute;
+    right:-5px;
+    top:-70px;
+}
+
+@media (max-width:1350px) {
+    .left-line {
+        opacity: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .left-image {
+        opacity: 0.5;
+    }
+    .right-line {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width:763px) {
+    .summer-text {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+.pink-text {
+    color:#cc6699;
+}
+
+.summer-text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.summer input {
+    padding: 5px 20px;
+    background-color: #bdddf7;
+    outline: 0;
+    border:3px solid #336699;
+    position: absolute;
+    right:30px;
+    bottom: 30px;
+    width: 40%;
+    color:#336699;
+}
+
+.summer input::placeholder {
+    color:#336699;
+}
+
+@media (max-width:830px) {
+    .summer input {
+        width: 50%;
+        left:50%;
+        transform: translate(-50%,0);
+    }
+}
+
+.map {
+    margin-top: 120px;
+}
+
+#yandex-map {
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    background-color: #bdddf7;
+    padding:15px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+footer .contacts {
+    margin-left: unset;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
