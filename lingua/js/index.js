@@ -1,9 +1,3 @@
-let circle = document.querySelector(".circle");
-let svg = document.querySelectorAll("circle");
-for (let s of svg) {
-    s.setAttribute("r",circle.clientHeight/2+10);
-}
-
 $(document).ready(function(){
       $(".specialists-list").slick({
         arrows:true,
@@ -44,5 +38,11 @@ $(document).ready(function(){
 
       $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-      })
+      });
+
+      let circle = document.querySelector(".circle");
+      let svg = document.querySelectorAll("circle");
+      for (let s of svg) {
+          s.setAttribute("r",circle.clientHeight/2+10);
+      }
 });
